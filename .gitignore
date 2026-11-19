@@ -1,0 +1,16 @@
+node_modules/
+dist/
+coverage/
+.sites-local/
+*.log
+.env.local
+
+.env.*
+!*.example
+supabase/.temp/
+
+.local/
+*.tsbuildinfo
+.vercel/
+artifacts/
+

@@ -1,0 +1,16 @@
+.flight-tool-bar{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:7px;margin:0 0 24px;background:white;border:1px solid #dce5f0;border-radius:12px;}
+.flight-tool-tabs{display:flex;gap:6px;min-width:0;}
+.flight-tool-tabs>button{display:flex;align-items:center;justify-content:center;gap:9px;padding:13px 20px;border:0;border-radius:7px;background:transparent;color:#627491;font-size:12px;font-weight:600;cursor:pointer;white-space:nowrap;transition:background-color 160ms,color 160ms;}
+.flight-tool-tabs>button[data-active]{background:oklch(.26 .11 260);color:white;box-shadow:0 2px 5px #142b5615;}
+.flight-tool-tabs>button:not([data-active]):hover{background:#f0f5fc;color:oklch(.26 .11 260);}
+.flight-tool-tabs>button:focus-visible{outline:2px solid #5f80c7;outline-offset:2px;}
+.flight-tool-note{padding-right:14px;font-size:11px;color:#7d8da6;}
+.flight-tool-panel:not([hidden]){animation:flight-tool-reveal 160ms ease both;outline:none;}
+.flight-tool-panel[hidden]{display:none!important;}
+.flight-workspace .flight-tool-panel .page-title{margin-top:0;margin-bottom:18px;}
+.flight-workspace .flight-tool-panel .page-title .eyebrow{display:none;}
+.flight-workspace .flight-tool-panel .page-title h1{font-size:21px;}
+@keyframes flight-tool-reveal{from{opacity:.4;transform:translateY(3px)}to{opacity:1;transform:none}}
+@media(max-width:900px){.flight-tool-note{display:none;}.flight-tool-tabs{width:100%;}.flight-tool-tabs>button{flex:1;}}
+@media(max-width:480px){.flight-tool-tabs>button{padding:12px 10px;gap:7px;font-size:11px;}.flight-tool-bar{margin-bottom:18px;}.flight-tool-tabs svg{width:16px;}}
+@media(prefers-reduced-motion:reduce){.flight-tool-panel:not([hidden]){animation:none;}.flight-tool-tabs>button{transition:none;}}

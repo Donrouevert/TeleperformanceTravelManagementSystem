@@ -1,0 +1,97 @@
+/* Theme controls are available in the workspace header and account screens. */
+.theme-toggle{border:1px solid var(--border);background:var(--white);color:var(--ink);width:36px;height:36px;}
+.theme-toggle-icons{position:relative;display:block;width:20px;height:20px;}
+.theme-icon{position:absolute;inset:0;margin:auto;transition:opacity 200ms ease,transform 240ms ease;}
+.theme-moon{opacity:1;transform:rotate(0) scale(1);}.theme-sun{opacity:0;transform:rotate(-75deg) scale(.5);}
+html[data-theme="dark"] .theme-moon{opacity:0;transform:rotate(75deg) scale(.5);}html[data-theme="dark"] .theme-sun{opacity:1;transform:rotate(0) scale(1);color:#fca311;}
+.auth-theme-toggle{position:fixed;right:max(20px,env(safe-area-inset-right));top:max(20px,env(safe-area-inset-top));z-index:10;}
+html.theme-switching,html.theme-switching :is(body,.topbar,main,.card,.modal,.notification-popup,.auth-page,.auth-card,.auth-form-panel,.btn,.theme-toggle,input,select,textarea,.flight-tool-bar,.flight-select-trigger,.flight-select-menu,.flight-calendar,.flight-time-popup,.flight-directory,.fare-table td,.fare-table th,.destination-region,.destination-region h3 button,.date-trigger,.time-trigger,.traveler-control,.detail-section,.wizard-actions){transition:background-color 240ms ease,color 240ms ease,border-color 240ms ease,box-shadow 240ms ease;}
+@media(max-width:600px){.topbar-actions .theme-toggle{width:36px;height:40px;}.topbar-actions .account-trigger{max-width:calc(100% - 156px);}.topbar-actions{gap:6px;}.auth-theme-toggle{top:12px;right:12px;}}
+@media(max-width:360px){.topbar-actions .account-trigger{max-width:calc(100% - 132px);}}
+@media screen {
+ :root[data-theme="dark"]{--white:#14213d;--surface:#0b1323;--ink:#edf2fa;--navy:#e7efff;--muted:#b7c6db;--border:#344761;--blue:#9bc3ff;--cyan:#85d7ec;--green:#87dfb4;--purple:#c8b3ff;--amber:#ffd080;--red:#ffb1b1;--blue-light:#233957;--green-light:#153c32;--amber-light:#45351e;--red-light:#452632;--shadow:0 8px 28px #00000030;--theme-canvas:#0b1323;--theme-panel:#14213d;--theme-raised:#1c2e48;--theme-hover:#243b59;--theme-text:#edf2fa;--theme-muted:#b7c6db;--theme-border:#344761;--theme-accent:#fca311;--theme-on-accent:#14213d;color:var(--ink);background:var(--surface);}
+ :root[data-theme="dark"] :is(body,.app-body,main){background:var(--surface);color:var(--ink);}
+ :root[data-theme="dark"] :is(.card,.detail-section,.wizard-form,.wizard-steps,.modal,.notification-popup,.auth-card,.auth-form-panel,.skeleton-surface){background:var(--white);border-color:var(--border);color:var(--ink);}
+ :root[data-theme="dark"] .topbar{background:#14213df5;border-color:var(--border);}
+ :root[data-theme="dark"] footer{color:var(--muted);border-color:var(--border);}
+ :root[data-theme="dark"] :is(input,select,textarea){background:#101c31;color:var(--ink);border-color:var(--border);}
+ :root[data-theme="dark"] :is(input,textarea)::placeholder{color:#9cacbf;}
+ :root[data-theme="dark"] input[readonly]{background:var(--theme-raised);color:var(--muted);}
+ :root[data-theme="dark"] :is(input,select,textarea):focus-visible{outline-color:#9bc3ff;}
+ :root[data-theme="dark"] :is(.btn-primary,.fare-book,.flight-picker-actions .calendar-done,.flight-calendar footer .calendar-done){background:#fca311;border-color:#fca311;color:#14213d;box-shadow:none;}
+ :root[data-theme="dark"] :is(.btn-primary,.fare-book,.flight-picker-actions .calendar-done,.flight-calendar footer .calendar-done):hover:not(:disabled){background:#ffb638;border-color:#ffb638;color:#14213d;}
+ :root[data-theme="dark"] .btn:not(.btn-primary):not(.btn-danger):hover:not(:disabled){background:var(--theme-hover);color:var(--ink);}
+ :root[data-theme="dark"] .btn-danger{background:var(--red-light);color:var(--red);border-color:#80505c;}
+ :root[data-theme="dark"] .theme-toggle{background:var(--theme-raised);color:var(--ink);}
+ :root[data-theme="dark"] :is(.tooltip,.smart-panel-heading){background:var(--theme-raised);color:#edf2fa;}
+ :root[data-theme="dark"] :is(.welcome-banner,.auth-visual-brand,.auth-visual-copy){color:#ffffff;}
+ :root[data-theme="dark"] :is(.header-brand .brand-wordmark>img,.auth-mobile-brand>img,.login-welcome-wordmark>img,.login-welcome-emblem>img,.workspace-skeleton-brand img){filter:brightness(0) invert(1);}
+ :root[data-theme="dark"] :is(.header-brand .brand-wordmark>small,.auth-mobile-brand>span){color:var(--muted);}
+ :root[data-theme="dark"] :is(.sidebar,.mobile-sidebar){--rail-bg:#101b30;--rail-hover:#243653;--rail-border:#344761;}
+ :root[data-theme="dark"] .sidebar .collapse-btn{background:#1c2e48;color:#fca311;border-color:#566c8c;}
+ :root[data-theme="dark"] .sidebar .collapse-btn:hover{background:#fca311;color:#14213d;}
+ :root[data-theme="dark"] :is(thead,.fare-table th,.wizard-actions,.flight-foot){background:#1c2e48;color:var(--ink);border-color:var(--border);}
+ :root[data-theme="dark"] tbody tr:hover{background:#1d304c;}
+ :root[data-theme="dark"] :is(td,th,.card-heading,.table-toolbar,.detail-section-head,.table-card-foot,.step-progress){border-color:var(--border);}
+ :root[data-theme="dark"] :is(.subtle-banner,.policy-warning){border-color:#4b607b;background:var(--blue-light);color:#d1e3ff;}
+ :root[data-theme="dark"] .policy-warning small{color:#ccd8e8;}
+ :root[data-theme="dark"] :is(.eco-filter>p,.journey-bottom p,.journey-bottom h3){color:var(--green);}
+ :root[data-theme="dark"] :is(.pastel,.airline-symbol,.metric-icon,.section-letter,.wizard-step>span){background:var(--theme-raised);color:#a8cbff;border-color:var(--border);}
+ :root[data-theme="dark"] .wizard-step.active>span{background:#fca311;color:#14213d;border-color:#fca311;}
+ :root[data-theme="dark"] .status-rebooking_requested{background:#332b4d;color:#d5c0ff;border-color:#69557f;}
+ :root[data-theme="dark"] .badge{border-color:#56687e;}
+ :root[data-theme="dark"] .flight-search-page{--flight-navy:#e7efff;--flight-ice:#233957;color:var(--ink);}
+ :root[data-theme="dark"] :is(.flight-directory,.flight-tool-bar,.flight-select-trigger,.flight-select-menu,.flight-calendar,.flight-time-popup,.date-trigger,.time-trigger,.traveler-control,.destination-region,.destination-region h3 button){background:#14213d;color:#edf2fa;border-color:#344761;}
+ :root[data-theme="dark"] :is(.date-trigger,.time-trigger,.flight-select-trigger)[data-popup-open],:root[data-theme="dark"] :is(.date-trigger.is-active,.time-trigger.is-active){border-color:#88b8fb;box-shadow:0 0 0 2px #88b8fb30;}
+ :root[data-theme="dark"] .date-trigger.is-active span span{background:#294367;color:#e7efff;}
+ :root[data-theme="dark"] :is(.flight-select-item,.flight-tool-tabs>button,.clock-face,.traveler-control>span){color:#edf2fa;}
+ :root[data-theme="dark"] :is(.flight-select-item[data-selected],.flight-select-item[data-highlighted],.fare-table tr.is-selected,.flight-tool-tabs>button:not([data-active]):hover,.region-content button:hover){background:#294367;color:#f3f7ff;}
+ :root[data-theme="dark"] :is(.flight-select-item[data-selected] .flight-select-check,.flight-select-trigger[data-popup-open] .flight-select-leading){color:#fca311;}
+ :root[data-theme="dark"] .flight-tool-tabs>button[data-active]{background:#fca311;color:#14213d;}
+ :root[data-theme="dark"] :is(.flight-tool-note,.date-trigger-wrap>small,.traveler-field>small,.fare-table td small,.fare-disclaimer,.fare-more small,.photo-credit,.calendar-month-nav>span,.time-trigger b,.time-trigger svg,.flight-select-leading,.flight-select-chevron,.clock-popup-heading p,.clock-mode-hint,.clock-validation p){color:#b7c6db;}
+ :root[data-theme="dark"] :is(.calendar-fields,.flight-calendar footer,.flight-picker-actions,.fare-table td,.fare-more,.search-bottom,.flight-search-card>.inventory-dates,.multi-city-row,.time-popup-fields,.clock-digital-display){border-color:#344761;}
+ :root[data-theme="dark"] :is(.calendar-month-nav button,.region-content button,.fare-more .btn){background:#1c2e48;color:#d7e6ff;border-color:#4c6483;}
+ :root[data-theme="dark"] .calendar-days button{color:#edf2fa;}
+ :root[data-theme="dark"] .calendar-days button:disabled{color:#7d8ca3;}
+ :root[data-theme="dark"] .calendar-days button.in-range{background:#294367;}
+ :root[data-theme="dark"] .calendar-days button.selected{background:#fca311;color:#14213d;}
+ :root[data-theme="dark"] .clock-boundary-tabs button{background:#101c31;color:#c2d0e2;border-color:#344761;}
+ :root[data-theme="dark"] .clock-boundary-tabs button[aria-pressed="true"]{background:#294367;color:#edf2fa;border-color:#80a9dc;}
+ :root[data-theme="dark"] .clock-digital-display input{background:transparent;color:#b7c6db;}
+ :root[data-theme="dark"] .clock-digital-display input.is-active{color:#fca311;}
+ :root[data-theme="dark"] .clock-face-rim{fill:#101c31;stroke:#4b607b;}
+ :root[data-theme="dark"] .clock-hand{stroke:#fca311;}
+ :root[data-theme="dark"] .clock-pivot{fill:#fca311;}
+ :root[data-theme="dark"] .clock-tick{stroke:#617897;}
+ :root[data-theme="dark"] .clock-number{color:#edf2fa;}
+ :root[data-theme="dark"] .clock-number.is-outer{color:#b7c6db;}
+ :root[data-theme="dark"] .clock-number.is-selected{background:#fca311;color:#14213d;}
+ :root[data-theme="dark"] .clock-number:hover{background:#294367;color:#ffffff;}
+ :root[data-theme="dark"] .clock-validation [role="alert"]{color:#ffb1b1;}
+ :root[data-theme="dark"] .auth-page{background:#0b1323;}
+ :root[data-theme="dark"] .auth-input-wrap{background:#101c31;border-color:#344761;}
+ :root[data-theme="dark"] .auth-input-wrap input{background:transparent;}
+ :root[data-theme="dark"] .auth-footer{color:#b7c6db;}
+ :root[data-theme="dark"] .login-welcome{background:radial-gradient(ellipse at 50% 35%,#1c2e48,#0b1323 75%);}
+ :root[data-theme="dark"] .login-welcome-content{color:#edf2fa;}
+ :root[data-theme="dark"] .login-welcome-emblem{background:#14213d;box-shadow:0 14px 55px #00000030;}
+ :root[data-theme="dark"] .login-welcome-orbit{border-color:#4c6483;}
+ :root[data-theme="dark"] .login-welcome-orbit:before{background:#fca311;}
+ :root[data-theme="dark"] :is(.login-welcome-wordmark>span,.login-welcome-message,.login-welcome-footer){color:#b7c6db;}
+ :root[data-theme="dark"] .login-welcome-progress{background:#344761;}
+ :root[data-theme="dark"] .login-welcome-progress i{background:#fca311;}
+ :root[data-theme="dark"] :is(.skeleton-line,.skeleton-title,.skeleton-number,.skeleton-pill,.skeleton-input){background:#2c405e;}
+ :root[data-theme="dark"] .skeleton-surface::after{background:linear-gradient(100deg,transparent,#ffffff08,transparent);}
+}
+@media(prefers-reduced-motion:reduce){.theme-icon,html.theme-switching,html.theme-switching *{transition:none!important;}}
+@media print{html{color-scheme:light!important;}.theme-toggle{display:none!important;}}
+@media screen {
+ :root[data-theme="dark"] .workspace-skeleton img{filter:brightness(0) invert(1);}
+ :root[data-theme="dark"] .provider-status{background:#294367;color:#e0ebff;}
+ :root[data-theme="dark"] .provider-landed{background:#153c32;color:#87dfb4;}
+ :root[data-theme="dark"] .provider-cancelled{background:#452632;color:#ffb1b1;}
+ :root[data-theme="dark"] :is(.provider-delayed,.provider-diverted){background:#45351e;color:#ffd080;}
+ :root[data-theme="dark"] .policy-warning{background:#45351e;color:#ffd080;border-color:#79603b;}
+ :root[data-theme="dark"] .policy-warning small{color:#ecd5a9;}
+ :root[data-theme="dark"] .sidebar .collapse-btn:focus-visible{outline-color:#fca311;box-shadow:0 0 0 2px #14213d;}
+}

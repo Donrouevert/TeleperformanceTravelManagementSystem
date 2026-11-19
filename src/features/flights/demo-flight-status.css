@@ -1,0 +1,2 @@
+.demo-status-card .smart-panel-heading{flex-wrap:wrap;}.demo-status-badge{margin-left:auto;padding:6px 10px;border-radius:6px;background:var(--amber-light);color:var(--amber);font-size:11px;white-space:nowrap;}.demo-data-note{margin:20px 22px 0;padding:13px 15px;background:var(--amber-light);color:var(--amber);border:1px solid var(--border);border-radius:7px;font-size:11px;line-height:1.7;}.demo-data-note b{display:block;margin-bottom:3px;}.demo-data-note p{margin:0;}
+@media(max-width:600px){.demo-status-badge{margin-left:0;}.demo-data-note{margin:16px 18px 0;}}

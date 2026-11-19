@@ -1,0 +1,11 @@
+import { cleanup, fireEvent, render, screen } from '@testing-library/react';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { afterEach, beforeEach, expect, it, vi } from 'vitest';
+import { AuthProvider } from '../contexts/AuthContext';
+const client=vi.hoisted(()=>({auth:{getSession:vi.fn(),onAuthStateChange:vi.fn(),updateUser:vi.fn(),signOut:vi.fn()},from:vi.fn()}));
+vi.mock('../lib/supabase',()=>({cloudMode:true,supabase:client}));
+beforeEach(()=>{vi.resetAllMocks();history.replaceState(null,'','/auth/reset-password');client.auth.onAuthStateChange.mockReturnValue({data:{subscription:{unsubscribe:vi.fn()}}});client.auth.updateUser.mockResolvedValue({error:null});client.auth.signOut.mockResolvedValue({error:null});});
+afterEach(()=>{cleanup();history.replaceState(null,'','/');});
+const open=()=>render(<QueryClientProvider client={new QueryClient()}><AuthProvider><h1>Private dashboard</h1></AuthProvider></QueryClientProvider>);
+it('keeps recovery sessions out of the dashboard and returns to a fresh sign-in form',async()=>{client.auth.getSession.mockResolvedValue({data:{session:{user:{id:'recovery-user'}}}});open();await screen.findByRole('heading',{name:'A fresh start.'});expect(client.from).not.toHaveBeenCalled();expect(screen.queryByText('Private dashboard')).not.toBeInTheDocument();fireEvent.change(screen.getByLabelText('New password'),{target:{value:'test-new-password'}});fireEvent.change(screen.getByLabelText('Confirm new password'),{target:{value:'test-new-password'}});fireEvent.click(screen.getByRole('button',{name:'Update password'}));await screen.findByRole('heading',{name:'You’re all set.'});fireEvent.click(screen.getByRole('button',{name:'Back to sign in'}));await screen.findByRole('heading',{name:'Welcome back.'});expect(client.auth.signOut).toHaveBeenCalledOnce();expect(screen.getByLabelText('Password')).toHaveValue('');});
+it('requires a session before displaying the new-password fields',async()=>{client.auth.getSession.mockResolvedValue({data:{session:null}});open();expect(await screen.findByRole('alert')).toHaveTextContent('invalid or has expired');expect(screen.queryByLabelText('New password')).not.toBeInTheDocument();expect(client.from).not.toHaveBeenCalled();});

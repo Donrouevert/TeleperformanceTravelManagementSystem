@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script>
+      (() => { let theme; try { theme = localStorage.getItem('teleperformance-travel-theme'); } catch {} if (theme !== 'light' && theme !== 'dark') theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; document.documentElement.dataset.theme = theme; document.documentElement.style.colorScheme = theme; })();
+    </script>
+    <script>
+      (() => { const reload = performance.getEntriesByType?.('navigation')[0]?.type === 'reload'; document.documentElement.dataset.reloading = String(reload); if (reload) { document.documentElement.dataset.reloadStarted = String(performance.now()); setTimeout(() => { if (document.documentElement.dataset.reloading === 'true') document.getElementById('reload-help')?.removeAttribute('hidden'); }, 12000); } })();
+    </script>
+    <link rel="stylesheet" href="/reload-screen.css"/>
+    <meta name="theme-color" content="#230D2E"/>
+    <meta name="description" content="TP Travel: Teleperformance corporate travel workspace."/>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=teleperformance-1"/>
+    <title>TeleperformanceTravelManagementSystem</title>
+  </head>
+  <body>
+    <div id="reload-screen" role="status" aria-live="polite" aria-label="Refreshing your travel workspace">
+      <section class="reload-panel">
+        <div class="reload-wordmark"><img src="/brand/teleperformance-wordmark.svg" alt="Teleperformance" width="112" height="24"/><span>TRAVEL MANAGEMENT</span></div>
+        <div class="reload-flight-path" aria-hidden="true"><svg class="reload-route" viewBox="0 0 320 86" preserveAspectRatio="none"><path d="M14 66 Q160 4 306 66"/><circle cx="14" cy="66" r="3"/><circle cx="306" cy="66" r="3"/></svg><span class="reload-plane"><svg viewBox="0 0 24 24"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg></span></div>
+        <h1>Refreshing your workspace</h1><p>Getting your journey ready.</p><div class="reload-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div id="reload-help" hidden>Taking longer than usual.<button type="button" onclick="window.location.reload()">Try again</button></div>
+      </section>
+    </div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

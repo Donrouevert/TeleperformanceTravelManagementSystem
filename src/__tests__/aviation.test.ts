@@ -1,0 +1,17 @@
+import {describe,expect,it} from 'vitest';
+import {flightStatusLabel,formatFlightTime,normalizeFlightNumber,parseFlightPayload,selectRelevantFlight,type LiveFlight} from '../lib/aviation';
+const make=(patch:Partial<LiveFlight>={}):LiveFlight=>({flight_date:'2026-11-15',flight_status:'scheduled',flight:{iata:'PR2845',number:'2845'},airline:{name:'Philippine Airlines'},departure:{iata:'MNL',airport:'Manila',scheduled:'2026-11-15T08:00:00Z'},arrival:{iata:'CEB',airport:'Cebu',scheduled:'2026-11-15T09:30:00Z'},...patch});
+describe('Aviationstack parsing and current flight selection',()=>{
+ it.each([' pr 2845 ','PR-2845','pR - 2845'])('normalizes %s before querying',input=>expect(normalizeFlightNumber(input)).toBe('PR2845'));
+ it.each(['DEMO01A','12345','PR2845?access_key=x','', 'PR123456'])('rejects invalid or internal demo code %s',input=>expect(()=>normalizeFlightNumber(input)).toThrow());
+ it('rejects provider errors inside HTTP 200 and keeps provider details private',()=>{expect(()=>parseFlightPayload({error:{code:'invalid_access_key',info:'secret key raw detail'}})).toThrow('key is invalid');expect(()=>parseFlightPayload({error:{code:104,type:'usage_limit_reached'}})).toThrow('monthly quota');expect(()=>parseFlightPayload({data:{}})).toThrow('invalid response');});
+ it('tolerates nullable provider fields without inventing zero delays',()=>{const [row]=parseFlightPayload({data:[{flight:{iata:'PR2845'},departure:{delay:null},arrival:null}]});expect(row.departure.delay).toBeUndefined();expect(row.arrival.airport).toBe('');expect(formatFlightTime(row.arrival.actual)).toBe('Not reported');});
+ it('shows UTC timestamps in Philippine time, including the next Philippine day',()=>{expect(formatFlightTime('2026-11-14T17:30:00Z')).toContain('01:30');expect(formatFlightTime('2026-11-14T17:30:00Z')).toContain('15');expect(formatFlightTime('2026-11-14T17:30:00Z')).toContain('PHT');});
+ it('chooses an active flight instead of an older provider entry or another flight number',()=>{
+  const old=make({flight_date:'2026-11-14',departure:{iata:'MNL',airport:'Manila',scheduled:'2026-11-14T08:00:00Z'}}),active=make({flight_status:'active'}),other=make({flight:{iata:'PR9999',number:'9999'}});
+  expect(selectRelevantFlight([old,other,active],'PR2845',Date.parse('2026-11-15T08:30:00Z'))).toBe(active);
+  expect(selectRelevantFlight([old],'PR2845',Date.parse('2026-11-15T08:30:00Z'))).toBeUndefined();
+ });
+ it('uses the Philippine date across UTC midnight and recognizes an overnight active leg',()=>{const row=make({departure:{iata:'MNL',airport:'Manila',scheduled:'2026-11-14T17:00:00Z'}});expect(selectRelevantFlight([row],'PR2845',Date.parse('2026-11-14T18:00:00Z'))).toBe(row);const overnight=make({flight_status:'active',departure:{iata:'LHR',airport:'London',scheduled:'2026-11-14T12:00:00Z'},arrival:{iata:'MNL',airport:'Manila',scheduled:'2026-11-15T05:00:00Z'}});expect(selectRelevantFlight([overnight],'PR2845',Date.parse('2026-11-15T01:00:00Z'))).toBe(overnight);});
+ it('labels delayed scheduled flights, cancelled and diverted flights accurately',()=>{expect(flightStatusLabel(make({departure:{iata:'MNL',airport:'Manila',delay:20}}))).toBe('Delayed');expect(flightStatusLabel(make({flight_status:'active'}))).toBe('Active / En Route');expect(flightStatusLabel(make({flight_status:'cancelled'}))).toBe('Cancelled');expect(flightStatusLabel(make({flight_status:'diverted'}))).toBe('Diverted');});
+});

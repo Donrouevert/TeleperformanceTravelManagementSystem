@@ -1,0 +1,6 @@
+import type {TravelRequest} from '../types/travel';
+export function billingBalance(r:TravelRequest){const f=r.tmcFulfillment;if(!f)return {company:0,employee:0,total:0};const wasSettled=f.paymentStatus!=='UNBILLED';const company=f.costsPhp.companyBillableTotal-(r.settledCompanyPhp??(wasSettled?f.costsPhp.companyBillableTotal:0)),employee=f.costsPhp.employeePayableExcessFee-(r.settledEmployeePhp??(wasSettled?f.costsPhp.employeePayableExcessFee:0));return {company,employee,total:company+employee};}
+export function ledgerCsv(records:TravelRequest[]){
+ const rows:(string|number)[][]=[['Request','Employee','PNR','Cost center','Base fare PHP','Taxes PHP','Baggage PHP','Total PHP','Company PHP','Employee PHP','Company balance PHP','Employee balance PHP','Status'],...records.filter(r=>r.tmcFulfillment).map(r=>{const f=r.tmcFulfillment!,c=f.costsPhp,b=billingBalance(r);return [r.reference,r.requestor.employeeName,f.bookingReferencePnr,r.requestor.costCenterProjectCode,c.baseFare,c.taxesAndFees,c.baggageFee,c.totalCost,c.companyBillableTotal,c.employeePayableExcessFee,b.company,b.employee,f.paymentStatus];})];
+ return '\uFEFF'+rows.map(row=>row.map(value=>'"'+(typeof value==='number'?String(value):String(value).replace(/^[=+@-]/,"'$&")).replaceAll('"','""')+'"').join(',')).join('\r\n');
+}

@@ -1,0 +1,14 @@
+{
+  "projectRef": "pfylcerdvtajgeoxlxvi",
+  "origin": "https://teleperformance-travel-management.solefolio16.chatgpt.site",
+  "edgeFunction": {
+    "slug": "aviationstack",
+    "status": "ACTIVE",
+    "version": 1
+  },
+  "liveProviderKeyConfigured": false,
+  "demoFlightCodes": [
+    "DEMO01A",
+    "DEMO02A"
+  ]
+}

@@ -1,0 +1,742 @@
+[
+  {
+    "id": "2eb235c1-23f5-4d4c-b06c-d277dfa24615",
+    "co2_kg": 45,
+    "origin": "MNL",
+    "status": "SCHEDULED",
+    "airline": "Philippine Airlines",
+    "base_fare": 2457,
+    "eco_choice": false,
+    "destination": "CEB",
+    "travel_type": "Domestic",
+    "flight_cabins": [
+      {
+        "capacity": 0,
+        "flight_id": "2eb235c1-23f5-4d4c-b06c-d277dfa24615",
+        "cabin_class": "Premium Economy",
+        "available_seats": 0
+      },
+      {
+        "capacity": 0,
+        "flight_id": "2eb235c1-23f5-4d4c-b06c-d277dfa24615",
+        "cabin_class": "Business",
+        "available_seats": 0
+      },
+      {
+        "capacity": 180,
+        "flight_id": "2eb235c1-23f5-4d4c-b06c-d277dfa24615",
+        "cabin_class": "Economy",
+        "available_seats": 179
+      }
+    ],
+    "flight_number": "DEMO01A",
+    "taxes_and_fees": 0,
+    "arrival_timestamp": "2027-02-02T01:30:00+00:00",
+    "baggage_rate_per_kg": 0,
+    "departure_timestamp": "2027-02-02T00:00:00+00:00",
+    "baggage_allowance_kg": 0
+  },
+  {
+    "id": "307590a4-5a54-4845-b4c1-b48c6f4bb0c5",
+    "co2_kg": 45,
+    "origin": "CEB",
+    "status": "SCHEDULED",
+    "airline": "Philippine Airlines",
+    "base_fare": 2457,
+    "eco_choice": false,
+    "destination": "MNL",
+    "travel_type": "Domestic",
+    "flight_cabins": [
+      {
+        "capacity": 0,
+        "flight_id": "307590a4-5a54-4845-b4c1-b48c6f4bb0c5",
+        "cabin_class": "Premium Economy",
+        "available_seats": 0
+      },
+      {
+        "capacity": 0,
+        "flight_id": "307590a4-5a54-4845-b4c1-b48c6f4bb0c5",
+        "cabin_class": "Business",
+        "available_seats": 0
+      },
+      {
+        "capacity": 180,
+        "flight_id": "307590a4-5a54-4845-b4c1-b48c6f4bb0c5",
+        "cabin_class": "Economy",
+        "available_seats": 179
+      }
+    ],
+    "flight_number": "DEMO01B",
+    "taxes_and_fees": 0,
+    "arrival_timestamp": "2027-02-06T10:30:00+00:00",
+    "baggage_rate_per_kg": 0,
+    "departure_timestamp": "2027-02-06T09:00:00+00:00",
+    "baggage_allowance_kg": 0
+  },
+  {
+    "id": "9e0c8801-9d7a-43e7-aa23-3205827053ff",
+    "co2_kg": 45,
+    "origin": "MNL",
+    "status": "SCHEDULED",
+    "airline": "Philippine Airlines",
+    "base_fare": 2457,
+    "eco_choice": false,
+    "destination": "CEB",
+    "travel_type": "Domestic",
+    "flight_cabins": [
+      {
+        "capacity": 0,
+        "flight_id": "9e0c8801-9d7a-43e7-aa23-3205827053ff",
+        "cabin_class": "Premium Economy",
+        "available_seats": 0
+      },
+      {
+        "capacity": 0,
+        "flight_id": "9e0c8801-9d7a-43e7-aa23-3205827053ff",
+        "cabin_class": "Business",
+        "available_seats": 0
+      },
+      {
+        "capacity": 180,
+        "flight_id": "9e0c8801-9d7a-43e7-aa23-3205827053ff",
+        "cabin_class": "Economy",
+        "available_seats": 179
+      }
+    ],
+    "flight_number": "DEMO02A",
+    "taxes_and_fees": 0,
+    "arrival_timestamp": "2027-02-04T01:30:00+00:00",
+    "baggage_rate_per_kg": 0,
+    "departure_timestamp": "2027-02-04T00:00:00+00:00",
+    "baggage_allowance_kg": 0
+  },
+  {
+    "id": "14ea2df6-7de4-4a9a-8882-ce3deac47117",
+    "co2_kg": 45,
+    "origin": "CEB",
+    "status": "SCHEDULED",
+    "airline": "Philippine Airlines",
+    "base_fare": 2457,
+    "eco_choice": false,
+    "destination": "MNL",
+    "travel_type": "Domestic",
+    "flight_cabins": [
+      {
+        "capacity": 0,
+        "flight_id": "14ea2df6-7de4-4a9a-8882-ce3deac47117",
+        "cabin_class": "Premium Economy",
+        "available_seats": 0
+      },
+      {
+        "capacity": 0,
+        "flight_id": "14ea2df6-7de4-4a9a-8882-ce3deac47117",
+        "cabin_class": "Business",
+        "available_seats": 0
+      },
+      {
+        "capacity": 180,
+        "flight_id": "14ea2df6-7de4-4a9a-8882-ce3deac47117",
+        "cabin_class": "Economy",
+        "available_seats": 179
+      }
+    ],
+    "flight_number": "DEMO02B",
+    "taxes_and_fees": 0,
+    "arrival_timestamp": "2027-02-06T10:30:00+00:00",
+    "baggage_rate_per_kg": 0,
+    "departure_timestamp": "2027-02-06T09:00:00+00:00",
+    "baggage_allowance_kg": 0
+  },
+  {
+    "id": "c6d51e25-9c65-4557-b602-0c849f6e573b",
+    "co2_kg": 60,
+    "origin": "MNL",
+    "status": "SCHEDULED",
+    "airline": "Philippine Airlines",
+    "base_fare": 2979.5,
+    "eco_choice": false,
+    "destination": "DVO",
+    "travel_type": "Domestic",
+    "flight_cabins": [
+      {
+        "capacity": 0,
+        "flight_id": "c6d51e25-9c65-4557-b602-0c849f6e573b",
+        "cabin_class": "Premium Economy",
+        "available_seats": 0
+      },
+      {
+        "capacity": 0,
+        "flight_id": "c6d51e25-9c65-4557-b602-0c849f6e573b",
+        "cabin_class": "Business",
+        "available_seats": 0
+      },
+      {
+        "capacity": 180,
+        "flight_id": "c6d51e25-9c65-4557-b602-0c849f6e573b",
+        "cabin_class": "Economy",
+        "available_seats": 179
+      }
+    ],
+    "flight_number": "DEMO03A",
+    "taxes_and_fees": 0,
+    "arrival_timestamp": "2027-02-01T02:00:00+00:00",
+    "baggage_rate_per_kg": 0,
+    "departure_timestamp": "2027-02-01T00:00:00+00:00",
+    "baggage_allowance_kg": 0
+  },
+  {
+    "id": "7192cb6e-d0df-4895-9560-a7e4e158c25d",
+    "co2_kg": 60,
+    "origin": "DVO",
+    "status": "SCHEDULED",
+    "airline": "Philippine Airlines",
+    "base_fare": 2979.5,
+    "eco_choice": false,
+    "destination": "MNL",
+    "travel_type": "Domestic",
+    "flight_cabins": [
+      {
+        "capacity": 0,
+        "flight_id": "7192cb6e-d0df-4895-9560-a7e4e158c25d",
+        "cabin_class": "Premium Economy",
+        "available_seats": 0
+      },
+      {
+        "capacity": 0,
+        "flight_id": "7192cb6e-d0df-4895-9560-a7e4e158c25d",
+        "cabin_class": "Business",
+        "available_seats": 0
+      },
+      {
+        "capacity": 180,
+        "flight_id": "7192cb6e-d0df-4895-9560-a7e4e158c25d",
+        "cabin_class": "Economy",
+        "available_seats": 179
+      }
+    ],
+    "flight_number": "DEMO03B",
+    "taxes_and_fees": 0,
+    "arrival_timestamp": "2027-02-03T11:00:00+00:00",
+    "baggage_rate_per_kg": 0,
+    "departure_timestamp": "2027-02-03T09:00:00+00:00",
+    "baggage_allowance_kg": 0
+  },
+  {
+    "id": "d86853fe-d29e-466b-b693-5978de0f0d8f",
+    "co2_kg": 60,
+    "origin": "MNL",
+    "status": "SCHEDULED",
+    "airline": "Philippine Airlines",
+    "base_fare": 2979.5,
+    "eco_choice": false,
+    "destination": "DVO",
+    "travel_type": "Domestic",
+    "flight_cabins": [
+      {
+        "capacity": 0,
+        "flight_id": "d86853fe-d29e-466b-b693-5978de0f0d8f",
+        "cabin_class": "Premium Economy",
+        "available_seats": 0
+      },
+      {
+        "capacity": 0,
+        "flight_id": "d86853fe-d29e-466b-b693-5978de0f0d8f",
+        "cabin_class": "Business",
+        "available_seats": 0
+      },
+      {
+        "capacity": 180,
+        "flight_id": "d86853fe-d29e-466b-b693-5978de0f0d8f",
+        "cabin_class": "Economy",
+        "available_seats": 179
+      }
+    ],
+    "flight_number": "DEMO04A",
+    "taxes_and_fees": 0,
+    "arrival_timestamp": "2027-01-30T02:00:00+00:00",
+    "baggage_rate_per_kg": 0,
+    "departure_timestamp": "2027-01-30T00:00:00+00:00",
+    "baggage_allowance_kg": 0
+  },
+  {
+    "id": "647e9ba0-a8a6-4616-b87a-8ac40e57cd25",
+    "co2_kg": 60,
+    "origin": "DVO",
+    "status": "SCHEDULED",
+    "airline": "Philippine Airlines",
+    "base_fare": 2979.5,
+    "eco_choice": false,
+    "destination": "MNL",
+    "travel_type": "Domestic",
+    "flight_cabins": [
+      {
+        "capacity": 0,
+        "flight_id": "647e9ba0-a8a6-4616-b87a-8ac40e57cd25",
+        "cabin_class": "Premium Economy",
+        "available_seats": 0
+      },
+      {
+        "capacity": 0,
+        "flight_id": "647e9ba0-a8a6-4616-b87a-8ac40e57cd25",
+        "cabin_class": "Business",
+        "available_seats": 0
+      },
+      {
+        "capacity": 180,
+        "flight_id": "647e9ba0-a8a6-4616-b87a-8ac40e57cd25",
+        "cabin_class": "Economy",
+        "available_seats": 179
+      }
+    ],
+    "flight_number": "DEMO04B",
+    "taxes_and_fees": 0,
+    "arrival_timestamp": "2027-02-02T11:00:00+00:00",
+    "baggage_rate_per_kg": 0,
+    "departure_timestamp": "2027-02-02T09:00:00+00:00",
+    "baggage_allowance_kg": 0
+  },
+  {
+    "id": "7759f52a-56aa-442c-ad28-fedcbbc06273",
+    "co2_kg": 37.5,
+    "origin": "MNL",
+    "status": "SCHEDULED",
+    "airline": "Philippine Airlines",
+    "base_fare": 2449.5,
+    "eco_choice": false,
+    "destination": "ILO",
+    "travel_type": "Domestic",
+    "flight_cabins": [
+      {
+        "capacity": 0,
+        "flight_id": "7759f52a-56aa-442c-ad28-fedcbbc06273",
+        "cabin_class": "Premium Economy",
+        "available_seats": 0
+      },
+      {
+        "capacity": 0,
+        "flight_id": "7759f52a-56aa-442c-ad28-fedcbbc06273",
+        "cabin_class": "Business",
+        "available_seats": 0
+      },
+      {
+        "capacity": 180,
+        "flight_id": "7759f52a-56aa-442c-ad28-fedcbbc06273",
+        "cabin_class": "Economy",
+        "available_seats": 179
+      }
+    ],
+    "flight_number": "DEMO05A",
+    "taxes_and_fees": 0,
+    "arrival_timestamp": "2027-01-30T01:15:00+00:00",
+    "baggage_rate_per_kg": 0,
+    "departure_timestamp": "2027-01-30T00:00:00+00:00",
+    "baggage_allowance_kg": 0
+  },
+  {
+    "id": "8fe3d414-467f-4ca5-adcc-673746f7459a",
+    "co2_kg": 37.5,
+    "origin": "ILO",
+    "status": "SCHEDULED",
+    "airline": "Philippine Airlines",
+    "base_fare": 2449.5,
+    "eco_choice": false,
+    "destination": "MNL",
+    "travel_type": "Domestic",
+    "flight_cabins": [
+      {
+        "capacity": 0,
+        "flight_id": "8fe3d414-467f-4ca5-adcc-673746f7459a",
+        "cabin_class": "Premium Economy",
+        "available_seats": 0
+      },
+      {
+        "capacity": 0,
+        "flight_id": "8fe3d414-467f-4ca5-adcc-673746f7459a",
+        "cabin_class": "Business",
+        "available_seats": 0
+      },
+      {
+        "capacity": 180,
+        "flight_id": "8fe3d414-467f-4ca5-adcc-673746f7459a",
+        "cabin_class": "Economy",
+        "available_seats": 179
+      }
+    ],
+    "flight_number": "DEMO05B",
+    "taxes_and_fees": 0,
+    "arrival_timestamp": "2027-02-03T10:15:00+00:00",
+    "baggage_rate_per_kg": 0,
+    "departure_timestamp": "2027-02-03T09:00:00+00:00",
+    "baggage_allowance_kg": 0
+  },
+  {
+    "id": "e5018f84-3178-44da-bed5-d70b7dc18ceb",
+    "co2_kg": 37.5,
+    "origin": "MNL",
+    "status": "SCHEDULED",
+    "airline": "Philippine Airlines",
+    "base_fare": 2455.5,
+    "eco_choice": false,
+    "destination": "ILO",
+    "travel_type": "Domestic",
+    "flight_cabins": [
+      {
+        "capacity": 0,
+        "flight_id": "e5018f84-3178-44da-bed5-d70b7dc18ceb",
+        "cabin_class": "Premium Economy",
+        "available_seats": 0
+      },
+      {
+        "capacity": 0,
+        "flight_id": "e5018f84-3178-44da-bed5-d70b7dc18ceb",
+        "cabin_class": "Business",
+        "available_seats": 0
+      },
+      {
+        "capacity": 180,
+        "flight_id": "e5018f84-3178-44da-bed5-d70b7dc18ceb",
+        "cabin_class": "Economy",
+        "available_seats": 179
+      }
+    ],
+    "flight_number": "DEMO06A",
+    "taxes_and_fees": 0,
+    "arrival_timestamp": "2027-01-24T01:15:00+00:00",
+    "baggage_rate_per_kg": 0,
+    "departure_timestamp": "2027-01-24T00:00:00+00:00",
+    "baggage_allowance_kg": 0
+  },
+  {
+    "id": "c8e8de6c-b955-4362-a849-3bd1be319147",
+    "co2_kg": 37.5,
+    "origin": "ILO",
+    "status": "SCHEDULED",
+    "airline": "Philippine Airlines",
+    "base_fare": 2455.5,
+    "eco_choice": false,
+    "destination": "MNL",
+    "travel_type": "Domestic",
+    "flight_cabins": [
+      {
+        "capacity": 0,
+        "flight_id": "c8e8de6c-b955-4362-a849-3bd1be319147",
+        "cabin_class": "Premium Economy",
+        "available_seats": 0
+      },
+      {
+        "capacity": 0,
+        "flight_id": "c8e8de6c-b955-4362-a849-3bd1be319147",
+        "cabin_class": "Business",
+        "available_seats": 0
+      },
+      {
+        "capacity": 180,
+        "flight_id": "c8e8de6c-b955-4362-a849-3bd1be319147",
+        "cabin_class": "Economy",
+        "available_seats": 179
+      }
+    ],
+    "flight_number": "DEMO06B",
+    "taxes_and_fees": 0,
+    "arrival_timestamp": "2027-01-28T10:15:00+00:00",
+    "baggage_rate_per_kg": 0,
+    "departure_timestamp": "2027-01-28T09:00:00+00:00",
+    "baggage_allowance_kg": 0
+  },
+  {
+    "id": "d4fc866a-f5fd-4923-8964-776c3f353810",
+    "co2_kg": 32.5,
+    "origin": "CEB",
+    "status": "SCHEDULED",
+    "airline": "Philippine Airlines",
+    "base_fare": 2083,
+    "eco_choice": false,
+    "destination": "DVO",
+    "travel_type": "Domestic",
+    "flight_cabins": [
+      {
+        "capacity": 0,
+        "flight_id": "d4fc866a-f5fd-4923-8964-776c3f353810",
+        "cabin_class": "Premium Economy",
+        "available_seats": 0
+      },
+      {
+        "capacity": 0,
+        "flight_id": "d4fc866a-f5fd-4923-8964-776c3f353810",
+        "cabin_class": "Business",
+        "available_seats": 0
+      },
+      {
+        "capacity": 180,
+        "flight_id": "d4fc866a-f5fd-4923-8964-776c3f353810",
+        "cabin_class": "Economy",
+        "available_seats": 179
+      }
+    ],
+    "flight_number": "DEMO07A",
+    "taxes_and_fees": 0,
+    "arrival_timestamp": "2027-02-04T01:05:00+00:00",
+    "baggage_rate_per_kg": 0,
+    "departure_timestamp": "2027-02-04T00:00:00+00:00",
+    "baggage_allowance_kg": 0
+  },
+  {
+    "id": "ab49164a-70f9-4c92-b644-70621ee4347a",
+    "co2_kg": 32.5,
+    "origin": "DVO",
+    "status": "SCHEDULED",
+    "airline": "Philippine Airlines",
+    "base_fare": 2083,
+    "eco_choice": false,
+    "destination": "CEB",
+    "travel_type": "Domestic",
+    "flight_cabins": [
+      {
+        "capacity": 0,
+        "flight_id": "ab49164a-70f9-4c92-b644-70621ee4347a",
+        "cabin_class": "Premium Economy",
+        "available_seats": 0
+      },
+      {
+        "capacity": 0,
+        "flight_id": "ab49164a-70f9-4c92-b644-70621ee4347a",
+        "cabin_class": "Business",
+        "available_seats": 0
+      },
+      {
+        "capacity": 180,
+        "flight_id": "ab49164a-70f9-4c92-b644-70621ee4347a",
+        "cabin_class": "Economy",
+        "available_seats": 179
+      }
+    ],
+    "flight_number": "DEMO07B",
+    "taxes_and_fees": 0,
+    "arrival_timestamp": "2027-02-06T10:05:00+00:00",
+    "baggage_rate_per_kg": 0,
+    "departure_timestamp": "2027-02-06T09:00:00+00:00",
+    "baggage_allowance_kg": 0
+  },
+  {
+    "id": "057159cb-1074-47be-a6c6-be9ae3f79779",
+    "co2_kg": 32.5,
+    "origin": "CEB",
+    "status": "SCHEDULED",
+    "airline": "Philippine Airlines",
+    "base_fare": 2083,
+    "eco_choice": false,
+    "destination": "DVO",
+    "travel_type": "Domestic",
+    "flight_cabins": [
+      {
+        "capacity": 0,
+        "flight_id": "057159cb-1074-47be-a6c6-be9ae3f79779",
+        "cabin_class": "Premium Economy",
+        "available_seats": 0
+      },
+      {
+        "capacity": 0,
+        "flight_id": "057159cb-1074-47be-a6c6-be9ae3f79779",
+        "cabin_class": "Business",
+        "available_seats": 0
+      },
+      {
+        "capacity": 180,
+        "flight_id": "057159cb-1074-47be-a6c6-be9ae3f79779",
+        "cabin_class": "Economy",
+        "available_seats": 179
+      }
+    ],
+    "flight_number": "DEMO08A",
+    "taxes_and_fees": 0,
+    "arrival_timestamp": "2027-01-22T01:05:00+00:00",
+    "baggage_rate_per_kg": 0,
+    "departure_timestamp": "2027-01-22T00:00:00+00:00",
+    "baggage_allowance_kg": 0
+  },
+  {
+    "id": "55906623-8d8d-48b3-bb1e-941812072d1c",
+    "co2_kg": 32.5,
+    "origin": "DVO",
+    "status": "SCHEDULED",
+    "airline": "Philippine Airlines",
+    "base_fare": 2083,
+    "eco_choice": false,
+    "destination": "CEB",
+    "travel_type": "Domestic",
+    "flight_cabins": [
+      {
+        "capacity": 0,
+        "flight_id": "55906623-8d8d-48b3-bb1e-941812072d1c",
+        "cabin_class": "Premium Economy",
+        "available_seats": 0
+      },
+      {
+        "capacity": 0,
+        "flight_id": "55906623-8d8d-48b3-bb1e-941812072d1c",
+        "cabin_class": "Business",
+        "available_seats": 0
+      },
+      {
+        "capacity": 180,
+        "flight_id": "55906623-8d8d-48b3-bb1e-941812072d1c",
+        "cabin_class": "Economy",
+        "available_seats": 179
+      }
+    ],
+    "flight_number": "DEMO08B",
+    "taxes_and_fees": 0,
+    "arrival_timestamp": "2027-01-24T10:05:00+00:00",
+    "baggage_rate_per_kg": 0,
+    "departure_timestamp": "2027-01-24T09:00:00+00:00",
+    "baggage_allowance_kg": 0
+  },
+  {
+    "id": "0c635993-196b-4564-9634-29e1c3a61097",
+    "co2_kg": 45,
+    "origin": "CEB",
+    "status": "SCHEDULED",
+    "airline": "Philippine Airlines",
+    "base_fare": 2457,
+    "eco_choice": false,
+    "destination": "MNL",
+    "travel_type": "Domestic",
+    "flight_cabins": [
+      {
+        "capacity": 0,
+        "flight_id": "0c635993-196b-4564-9634-29e1c3a61097",
+        "cabin_class": "Premium Economy",
+        "available_seats": 0
+      },
+      {
+        "capacity": 0,
+        "flight_id": "0c635993-196b-4564-9634-29e1c3a61097",
+        "cabin_class": "Business",
+        "available_seats": 0
+      },
+      {
+        "capacity": 180,
+        "flight_id": "0c635993-196b-4564-9634-29e1c3a61097",
+        "cabin_class": "Economy",
+        "available_seats": 179
+      }
+    ],
+    "flight_number": "DEMO09A",
+    "taxes_and_fees": 0,
+    "arrival_timestamp": "2027-02-01T01:30:00+00:00",
+    "baggage_rate_per_kg": 0,
+    "departure_timestamp": "2027-02-01T00:00:00+00:00",
+    "baggage_allowance_kg": 0
+  },
+  {
+    "id": "c7d15c82-80f9-48ec-a5dc-e03f948ab7be",
+    "co2_kg": 45,
+    "origin": "MNL",
+    "status": "SCHEDULED",
+    "airline": "Philippine Airlines",
+    "base_fare": 2457,
+    "eco_choice": false,
+    "destination": "CEB",
+    "travel_type": "Domestic",
+    "flight_cabins": [
+      {
+        "capacity": 0,
+        "flight_id": "c7d15c82-80f9-48ec-a5dc-e03f948ab7be",
+        "cabin_class": "Premium Economy",
+        "available_seats": 0
+      },
+      {
+        "capacity": 0,
+        "flight_id": "c7d15c82-80f9-48ec-a5dc-e03f948ab7be",
+        "cabin_class": "Business",
+        "available_seats": 0
+      },
+      {
+        "capacity": 180,
+        "flight_id": "c7d15c82-80f9-48ec-a5dc-e03f948ab7be",
+        "cabin_class": "Economy",
+        "available_seats": 179
+      }
+    ],
+    "flight_number": "DEMO09B",
+    "taxes_and_fees": 0,
+    "arrival_timestamp": "2027-02-03T10:30:00+00:00",
+    "baggage_rate_per_kg": 0,
+    "departure_timestamp": "2027-02-03T09:00:00+00:00",
+    "baggage_allowance_kg": 0
+  },
+  {
+    "id": "4dbe8a22-f44b-421c-b220-4c394dfe2ee8",
+    "co2_kg": 45,
+    "origin": "CEB",
+    "status": "SCHEDULED",
+    "airline": "Philippine Airlines",
+    "base_fare": 2457,
+    "eco_choice": false,
+    "destination": "MNL",
+    "travel_type": "Domestic",
+    "flight_cabins": [
+      {
+        "capacity": 0,
+        "flight_id": "4dbe8a22-f44b-421c-b220-4c394dfe2ee8",
+        "cabin_class": "Premium Economy",
+        "available_seats": 0
+      },
+      {
+        "capacity": 0,
+        "flight_id": "4dbe8a22-f44b-421c-b220-4c394dfe2ee8",
+        "cabin_class": "Business",
+        "available_seats": 0
+      },
+      {
+        "capacity": 180,
+        "flight_id": "4dbe8a22-f44b-421c-b220-4c394dfe2ee8",
+        "cabin_class": "Economy",
+        "available_seats": 179
+      }
+    ],
+    "flight_number": "DEMO10A",
+    "taxes_and_fees": 0,
+    "arrival_timestamp": "2027-02-05T01:30:00+00:00",
+    "baggage_rate_per_kg": 0,
+    "departure_timestamp": "2027-02-05T00:00:00+00:00",
+    "baggage_allowance_kg": 0
+  },
+  {
+    "id": "92b41193-5088-4009-976b-8ddc2b352309",
+    "co2_kg": 45,
+    "origin": "MNL",
+    "status": "SCHEDULED",
+    "airline": "Philippine Airlines",
+    "base_fare": 2457,
+    "eco_choice": false,
+    "destination": "CEB",
+    "travel_type": "Domestic",
+    "flight_cabins": [
+      {
+        "capacity": 0,
+        "flight_id": "92b41193-5088-4009-976b-8ddc2b352309",
+        "cabin_class": "Premium Economy",
+        "available_seats": 0
+      },
+      {
+        "capacity": 0,
+        "flight_id": "92b41193-5088-4009-976b-8ddc2b352309",
+        "cabin_class": "Business",
+        "available_seats": 0
+      },
+      {
+        "capacity": 180,
+        "flight_id": "92b41193-5088-4009-976b-8ddc2b352309",
+        "cabin_class": "Economy",
+        "available_seats": 179
+      }
+    ],
+    "flight_number": "DEMO10B",
+    "taxes_and_fees": 0,
+    "arrival_timestamp": "2027-02-14T10:30:00+00:00",
+    "baggage_rate_per_kg": 0,
+    "departure_timestamp": "2027-02-14T09:00:00+00:00",
+    "baggage_allowance_kg": 0
+  }
+]
